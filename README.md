@@ -16,6 +16,7 @@ yarn start or npm start
 - [Bootstrap](https://github.com/twbs/bootstrap/blob/main/README.md)
 - [React use](https://github.com/streamich/react-use/blob/master/README.md)
 - [Material UI](https://github.com/mui-org/material-ui/blob/next/README.md)
+- [React Query](https://github.com/tannerlinsley/react-query/blob/master/README.md)
 
 ### Server includes
 
