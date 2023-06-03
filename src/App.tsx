@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Home from "./components/Home";
 import { AppContext } from "./contexts/AppContext";
 import styled from "styled-components";
+import { WrapperPulse } from "./components/Home/styles";
 
 export const Wrapper = styled.div`
   background: ${({ color }) => color};
@@ -10,7 +11,7 @@ export const Wrapper = styled.div`
 `;
 
 function App() {
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(0);
   const [color, setColor] = useState("#202020");
 
   const [defaultColor, setDefaultColor] = useState("#202020");
@@ -48,9 +49,11 @@ function App() {
         changeColor: (color: string) => setDefaultColor(color),
       }}
     >
+      <WrapperPulse>
       <Wrapper color={color}>
         <Home />
       </Wrapper>
+      </WrapperPulse>
     </AppContext.Provider>
   );
 }

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 export const Wrapper = styled.div`
   height: 100vh;
@@ -25,4 +25,21 @@ export const ClickMeButton = styled.button`
   &:active {
     background: linear-gradient(90deg, rgb(73 6 6) 0%, rgb(13 4 4) 100%);
   }
+`;
+
+const PulseFade = keyframes`
+  0% {
+    background-color: #202020; /* cor inicial - clean */
+  }
+  50% {
+    background-color: #000000; /* cor de transição - dark */
+  }
+  100% {
+    background-color: #202020; /* cor final - clean */
+  }
+`;
+
+export const WrapperPulse = styled.div`
+  background-color: #202020; /* cor inicial - clean */
+  animation: ${PulseFade} 3s infinite;
 `;
